@@ -1,6 +1,6 @@
 <template>
-<nav>
-    <div class="nav">
+<nav class="container">
+    <div class="nav content">
         <div class="logo" @click="goHome">
             <div>GreenTrade</div> <img src="~@/assets/logo.svg">
         </div>
@@ -24,9 +24,9 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-    display: flex;
-    justify-content: center;
     background: #333;
+    z-index: 10;
+    position: relative;
 }
 
 .logo {
@@ -34,10 +34,6 @@ nav {
 }
 
 .nav {
-    max-width: $max-screen-width;
-    width: 100%;
-    padding: 0.77rem 1.25rem;
-
     display: flex;
     justify-content: space-between;
 }

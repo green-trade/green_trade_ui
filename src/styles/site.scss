@@ -1,9 +1,14 @@
-@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css);
 @import 'globals';
 @import 'typography';
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css);
 
 * {
     box-sizing: border-box;
+}
+
+html, body, #app {
+    width: 100%;
+    min-height: 100vh;
 }
 
 .logo {
@@ -24,8 +29,41 @@
 }
 
 .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
+    transition: all .5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
 }
+
+.fade-slide-enter-active, .fade-slide-leave-active {
+    transition: all .5s;
+}
+.fade-slide-enter, .fade-slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+.content {
+    max-width: $max-screen-width;
+    width: 100%;
+    padding: 0.77rem 1.25rem;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #f3f3f3;
+    z-index: 1000;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
