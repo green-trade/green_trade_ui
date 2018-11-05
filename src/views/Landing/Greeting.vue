@@ -28,11 +28,14 @@ export default {
     border-radius: 10px;
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
     color: #f3f3f3;
+
+    margin: 1rem 2rem;
 }
 
 h1 {
     color: #f3f3f3;
     text-align: center;
+    @include fluid-type($min-screen-width, $max-screen-width, 27px, 59px);
 }
 
 .words {
@@ -45,15 +48,21 @@ h1 {
 
     padding: 0.5rem 1rem;
     display: inline-block;
+    text-align: center;
 
     background-color: darken(#F3B129, 5%);
     color: #f3f3f3;
     border-radius: 5px;
+    border: 2px solid darken(#F3B129, 10%);
 }
 
 
 .options {
     display: flex;
     justify-content: space-between;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
 }
 </style>

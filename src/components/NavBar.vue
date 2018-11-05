@@ -1,21 +1,79 @@
 <template>
-<div id="nav">
-    <div class="logo">
-
+<nav>
+    <div class="nav">
+        <div class="logo" @click="goHome">
+            <div>GreenTrade</div> <img src="~@/assets/logo.svg">
+        </div>
+        <ul class="links">
+            <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="/about">About</router-link></li>
+        </ul>
     </div>
-    <ul class="links">
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-    </ul>
-</div>
+</nav>
 </template>
 
 <script>
 export default {
-
+  methods: {
+    goHome() {
+      this.$router.push('/');
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+nav {
+    display: flex;
+    justify-content: center;
+    background: #333;
+}
 
+.logo {
+    cursor: pointer;
+}
+
+.nav {
+    max-width: $max-screen-width;
+    width: 100%;
+    padding: 0.77rem 1.25rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    color: $primary-color;
+    align-items: center;
+    margin-top: -3px;
+
+    a, a:visited, a:link {
+        border-color: #333;
+
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        color: #f3f3f3;
+        text-decoration: none;
+        padding-bottom: 3px;
+
+        letter-spacing: 1.5px;
+        // text-transform: uppercase;
+        font-family: 'Questrial', sans-serif;
+
+        @include fluid-type($min-screen-width, $max-screen-width, 11px, 13px);
+
+        transition: border-color 0.3s ease;
+
+        &:hover, &.router-link-exact-active {
+            border-color: lighten($primary-color, 20%);
+        }
+    }
+
+    & > * {
+        margin-left: 1rem;
+    }
+}
 </style>
