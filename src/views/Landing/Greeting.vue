@@ -54,6 +54,14 @@ h1 {
     color: #f3f3f3;
     border-radius: 5px;
     border: 2px solid darken(#F3B129, 10%);
+    transition: all 0.5s ease;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #f3f3f3;
+        color: #444;
+        border-color: rgba(0, 0, 0, 0);
+    }
 }
 
 
