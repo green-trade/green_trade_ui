@@ -87,6 +87,7 @@ h1 {
     border-radius: 5px;
     border: 2px solid darken(#F3B129, 10%);
     transition: all 0.2s ease;
+    -webkit-transform-style: preserve-3d;
 
     &:hover {
         cursor: pointer;
@@ -94,7 +95,7 @@ h1 {
         color: darken($primary-color, 20%);
         border-color: $primary-color;
 
-        transform: translateZ(-3px) scale(1.05);
+        transform: translateZ(0) translateY(-3px) scale(1.05);
 
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
     }
