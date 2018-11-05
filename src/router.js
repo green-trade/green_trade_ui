@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Landing from './views/Landing/Landing.vue';
+import NotFound from './views/NotFound.vue';
 
 Vue.use(Router);
 
@@ -12,6 +13,11 @@ export default new Router({
       path: '/',
       name: 'landing',
       component: Landing,
+    },
+    {
+      path: '*',
+      name: 'not-found',
+      component: NotFound,
     },
     // {
     //   path: '/about',

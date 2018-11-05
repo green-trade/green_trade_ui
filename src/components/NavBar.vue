@@ -7,6 +7,8 @@
         <ul class="links">
             <li><router-link to="/">Home</router-link></li>
             <li><router-link to="/about">About</router-link></li>
+            <li><router-link to="/pricing">Pricing</router-link></li>
+            <li><router-link to="/contact">Contact</router-link></li>
         </ul>
     </div>
 </nav>
@@ -59,7 +61,7 @@ nav {
         // text-transform: uppercase;
         font-family: 'Questrial', sans-serif;
 
-        @include fluid-type($min-screen-width, $max-screen-width, 11px, 13px);
+        @include fluid-type($min-screen-width - 50px, $max-screen-width, 11px, 13px);
 
         transition: border-color 0.3s ease;
 

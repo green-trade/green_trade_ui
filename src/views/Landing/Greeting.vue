@@ -36,7 +36,8 @@ $greeting-breakpoint: $min-screen-width + 120px;
 
     height: 66.666vh;
     border-bottom: 12px solid rgba(0,0,0,0.3);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.4);
+
 }
 .greeting {
     padding: 1.5rem 1.77rem;
@@ -54,6 +55,7 @@ h1 {
     color: #f3f3f3;
     text-align: center;
     @include fluid-type($min-screen-width, $max-screen-width, 27px, 70px);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .title img {
@@ -103,12 +105,12 @@ h1 {
 
 
 .options {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
 
     @media only screen and (max-width: $greeting-breakpoint) {
         display: block;
