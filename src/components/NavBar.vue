@@ -46,6 +46,7 @@ nav {
     color: $primary-color;
     align-items: center;
     margin-top: -3px;
+    padding-inline-start: 0px;
 
     a, a:visited, a:link {
         border-color: #333;

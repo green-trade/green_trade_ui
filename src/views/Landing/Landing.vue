@@ -20,5 +20,6 @@ export default {
 <style lang="scss" scoped>
 body {
     background: #555;
+    height: 100vh;
 }
 </style>
